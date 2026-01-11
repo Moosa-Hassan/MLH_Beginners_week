@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual env
+.venv/
+
+# dotenv files
+.env
+
+# Streamlit
+.streamlit/
+
+# VS Code
+.vscode/

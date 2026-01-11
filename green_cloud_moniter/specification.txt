@@ -1,0 +1,3 @@
+Build a “Carbon-Aware” dashboard for the hacker community
+Using a public API (like Electricity Maps), create a tool that displays the current carbon intensity of your local power grid and tells you the best time of day to run “heavy” code tasks.
+Also check out the Green Software Foundation Carbon SDK
