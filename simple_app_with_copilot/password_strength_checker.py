@@ -53,43 +53,6 @@ def check_password_strength(password):
     strength = strength_levels[score]
     
     return strength, explanation
-def check_password_strength(password):
-    """
-    Check the strength of a password based on character combinations.
-    Returns a tuple of (strength_level, explanation)
-    """
-    score = 0
-    explanation = []
-    
-    if len(password) >= 8:
-        score += 1
-    else:
-        explanation.append("Password should be at least 8 characters long")
-    
-    if re.search(r"[a-z]", password):
-        score += 1
-    else:
-        explanation.append("Add lowercase letters")
-    
-    if re.search(r"[A-Z]", password):
-        score += 1
-    else:
-        explanation.append("Add uppercase letters")
-    
-    if re.search(r"[0-9]", password):
-        score += 1
-    else:
-        explanation.append("Add digits")
-    
-    if re.search(r"[!@#$%^&*()_+\-=\[\]{};:',.<>?/\\|`~]", password):
-        score += 1
-    else:
-        explanation.append("Add special characters")
-    
-    strength_levels = ["Very Weak", "Weak", "Fair", "Good", "Strong", "Very Strong"]
-    strength = strength_levels[score]
-    
-    return strength, explanation
 
 def main():
     password = input("Enter a password to check: ")
