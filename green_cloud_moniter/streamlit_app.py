@@ -35,7 +35,7 @@ else:
 
 if not df.empty:
     df_plot = df.reset_index()
-    df_plot["time_local"] = df_plot["time"].dt.tz_localize('UTC').dt.tz_convert(None)
+    df_plot["time_local"] = df_plot["time"].dt.tz_convert('UTC').dt.tz_convert(None)
     df_plot = df_plot.set_index("time_local")
     col2.line_chart(df_plot["intensity"])
 
