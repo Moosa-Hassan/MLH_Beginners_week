@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Live Poll</title>
+
+    </head>
+    <body>
+        <H1>Is this poll cool?</H1>
+        <button onclick="vote('yes')"> Yes, Definetly</button>
+        <button onclick="vote('no')">👎 No, It sucks</button>
+        <h3 id="results"></h3>
+        <script>
+            const ws = new WebSocket(`ws://${location.host}`);
+
+            ws.onmessage = (event) => {
+            const poll = JSON.parse(event.data);
+            document.getElementById("results").innerText =
+                `Yes: ${poll.yes} | No: ${poll.no}`;
+            };
+
+            function vote(ans){
+                ws.send(ans);
+            }
+        </script>
+
+    </body>
+</html>
