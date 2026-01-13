@@ -6,7 +6,7 @@ and summarizes it using Google Gemini.
 ## Features
 - Source-specific news (BBC, CNN, Verge)
 - AI-generated summaries
-- Runs daily automatically
+- Sends Email
 
 ## Tech Stack
 - Python
@@ -25,9 +25,9 @@ and summarizes it using Google Gemini.
 2. [Gemeni API](https://aistudio.google.com/api-keys)
 3. Generate app password from google account
 
-Set up .env file as below (dont put quites)
-NEWS_API_KEY=_api_key_from_newsapi
-GEMINI_API_KEY=api_key_from_gemeni
-EMAIL_USER=your_email
-EMAIL_PASSWORD=16_char_password_without_spaces
+Set up .env file as below (dont put quotes)
+1. NEWS_API_KEY=_api_key_from_newsapi
+2. GEMINI_API_KEY=api_key_from_gemeni
+3. EMAIL_USER=your_email
+4. EMAIL_PASSWORD=16_char_password_without_spaces
 
